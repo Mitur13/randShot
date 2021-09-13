@@ -13,15 +13,18 @@ def get_random_string(size=2, chars=string.ascii_lowercase):	#define function to
     return ''.join(random.choice(chars) for i in range(size))	#return the string	
 
 def openlink():
-	keyboard.press_and_release('alt+tab')
+	keyboard.press_and_release('alt+tab')	#focus back on browser window
 	time.sleep(.5)
-	keyboard.press_and_release('ctrl+w')
+	keyboard.press_and_release('ctrl+w')	#close the previous browser tab (works with Edge)
 	two_letters = get_random_string(2)		#get string of 2 letters
-	numbers = str(format(random.randint(0,9999), '04d'))
-	mylink = ["http://prnt.sc/", two_letters, numbers]
+	numbers = str(format(random.randint(0,9999), '04d'))	#generate string of digits 0000-9999
+	mylink = ["http://prnt.sc/", two_letters, numbers]	
 	full_link = "".join(mylink)		#combining the list to create a link
 	webbrowser.open(full_link)		#open a link in the browser
-	print(full_link)
+	print(full_link)		#print the link in the command line (history)
+
+### Add a button to save the link to a .txt file (append)
+	### Popup with text input window - 'Add note to the link' - save in file along the link
 
 btnopenlink = Button(window,text="Open Random LightShot screenshot!", width=30,height=2,command=openlink).pack()
 
