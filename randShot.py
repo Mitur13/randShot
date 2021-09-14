@@ -28,4 +28,7 @@ def openlink():
 
 btnopenlink = Button(window,text="Open Random LightShot screenshot!", width=30,height=2,command=openlink).pack()
 
+btnsavelink = Button(window,text="Save current link", width=25,height=1)
+btnsavelink.place(relx=0.5, y=60, anchor=CENTER)
+
 window.mainloop()
