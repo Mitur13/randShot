@@ -23,7 +23,7 @@ def openlink():
 	webbrowser.open(full_link)		#open a link in the browser
 	print(full_link)		#print the link in the command line (history)
 
-### Add a button to save the link to a .txt file (append)
+### Add functionality: save the link to a .txt file (append)
 	### Popup with text input window - 'Add note to the link' - save in file along the link
 
 btnopenlink = Button(window,text="Open Random LightShot screenshot!", width=30,height=2,command=openlink).pack()
