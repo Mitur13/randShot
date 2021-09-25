@@ -40,9 +40,10 @@ def savelink():			#saves the current link to .txt file
 
 
 	### need to use .get method to pass the user input to the variable
-	comment = Entry(popupwin, width=30)) #create an entry widget
-	comment.pack()
-	comment = str(comment)	#turn Entry into string
+	comment = Entry(popupwin, width=30) #create an entry widget
+	comment = comment.pack()
+	
+	#comment = str(comment)	#turn Entry into string
 
 	###Add button that passes the users entry to the comment variable
 
